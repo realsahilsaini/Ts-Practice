@@ -53,3 +53,27 @@ getEmployeeData({name: 'Sahil', age: 22, empId: 1234});
 //Type Aliases
 //Type aliases are a way to give a type a name
 
+type word = string;
+type num = number;
+
+let wordVariable: word = 'Hello';
+let numVariable: num = 22;
+
+// ------------
+
+type customType = string | number | null;
+
+let customVariable: customType;
+
+// ------------
+
+type customUser = {
+    name: string;
+    age: number;
+}
+
+function getCustomUserData(obj: customUser){
+  //code
+}
+
+

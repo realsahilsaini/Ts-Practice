@@ -21,6 +21,23 @@ function getDataofUser(obj: Person){
 
 getDataofUser({name: 'Sahil', age: 22, gender:'Male'});
 
+
+//If two interface have the same name then it will merge the properties of both interfaces
+
+interface sameName{
+    name: string;
+}
+
+interface sameName{
+  age: number;
+}
+
+function getData(obj: sameName){
+  //code
+}
+
+getData({name: 'Sahil', age: 22});
+
 //Extending Interfaces
 
 interface Employee extends Person {
@@ -32,3 +49,7 @@ function getEmployeeData(obj: Employee){
 }
 
 getEmployeeData({name: 'Sahil', age: 22, empId: 1234});
+
+//Type Aliases
+//Type aliases are a way to give a type a name
+

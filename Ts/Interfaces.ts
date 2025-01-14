@@ -20,3 +20,15 @@ function getDataofUser(obj: Person){
 }
 
 getDataofUser({name: 'Sahil', age: 22, gender:'Male'});
+
+//Extending Interfaces
+
+interface Employee extends Person {
+    empId: number;
+}
+
+function getEmployeeData(obj: Employee){
+  //code
+}
+
+getEmployeeData({name: 'Sahil', age: 22, empId: 1234});

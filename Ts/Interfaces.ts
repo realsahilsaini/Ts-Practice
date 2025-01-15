@@ -77,3 +77,28 @@ function getCustomUserData(obj: customUser){
 }
 
 
+//Intersection and Union
+
+//Union
+type unionType = string | number;
+
+let unionVariable: unionType = 22;
+
+// ----------------
+
+//Intersection
+
+type User = {
+    name: string;
+    age: number;
+} 
+
+type Admin = User & {
+    getDetails(user: string): void;
+}
+
+function getAdminData(obj: Admin){
+  obj.age;
+  obj.name;
+  obj.getDetails('Sahil');
+}

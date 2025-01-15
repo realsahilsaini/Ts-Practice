@@ -102,3 +102,23 @@ function getAdminData(obj: Admin){
   obj.name;
   obj.getDetails('Sahil');
 }
+
+
+//Difference between Interface and Type 
+
+/*
+type abcd = number;
+type abcd = string; //Error
+
+Interface abcd {
+  name: string;
+}
+
+Interface abcd {
+  age: number;
+}
+
+type - Used for primitive types, union, intersection, tuples.
+
+Interface - Used for objects.
+*/

@@ -68,7 +68,7 @@ class PersonOptionalProps{
 }
 
 let optionalPerson = new PersonOptionalProps('Sahil');
-console.log(optionalPerson);
+// console.log(optionalPerson);
 
 //Parameter Properties
 class PersonParamProps{
@@ -77,6 +77,33 @@ class PersonParamProps{
   }
 }
 //Here the properties are declared in the constructor itself and not outside the constructor like in the above example 
+
+
+//Getters and Setters
+class PersonGetSet{
+  constructor(public _name: string, public age: number){
+
+  }
+
+  get name(): string {
+    return this._name;
+  }
+
+  set personName(name: string){
+    this._name = name;
+  }
+  
+}
+
+let getSetPerson = new PersonGetSet('Sahil', 22);
+console.log(getSetPerson);
+
+//Setting the name using setter
+getSetPerson.personName = 'Aadi';
+
+//Getting the name using getter
+console.log(getSetPerson.name);
+
 
 
 

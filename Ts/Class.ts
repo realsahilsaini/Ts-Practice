@@ -102,7 +102,25 @@ console.log(getSetPerson);
 getSetPerson.personName = 'Aadi';
 
 //Getting the name using getter
-console.log(getSetPerson.name);
+// console.log(getSetPerson.name);
+
+
+//Static Members
+//Static members are the members of the class that are accessed using the class name itself and not the object of the class. No need to create an object to access the static members.
+class StaticMembers{
+  static count: number = 0;
+
+  constructor(){
+    StaticMembers.count++;
+  }
+}
+
+let s1 = new StaticMembers();
+let s2 = new StaticMembers();
+let s3 = new StaticMembers();
+
+console.log(StaticMembers.count);
+
 
 
 

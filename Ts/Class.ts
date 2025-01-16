@@ -96,7 +96,7 @@ class PersonGetSet{
 }
 
 let getSetPerson = new PersonGetSet('Sahil', 22);
-console.log(getSetPerson);
+// console.log(getSetPerson);
 
 //Setting the name using setter
 getSetPerson.personName = 'Aadi';
@@ -119,7 +119,25 @@ let s1 = new StaticMembers();
 let s2 = new StaticMembers();
 let s3 = new StaticMembers();
 
-console.log(StaticMembers.count);
+// console.log(StaticMembers.count);
+
+
+//Abstract Classes and Methods
+//Abstract classes are the classes that cannot be instantiated and are used as the base class for other classes. Abstract methods are the methods that are declared in the abstract class but are not implemented in the abstract class. The abstract methods must be implemented in the derived class.
+abstract class Animal{
+  abstract makeSound(): void;
+}   
+
+class Dog extends
+Animal{
+  makeSound(){
+    console.log('Bark');
+  }
+}
+
+let dogo = new Dog();
+dogo.makeSound(); //Bark
+
 
 
 

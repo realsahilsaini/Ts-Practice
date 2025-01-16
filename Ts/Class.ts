@@ -21,8 +21,8 @@ class BottleMaker{
 let b1 = new BottleMaker('Milton', 1000,  'Red', 'metal');
 let b2 = new BottleMaker('Cello', 500,  'Blue', 'plastic');
 
-console.log(b1);
-console.log(b2);
+// console.log(b1);
+// console.log(b2);
 
 //this Keyword
 class Person{
@@ -39,5 +39,22 @@ class PersonAM{
   }
 }
 
-let p1 = new PersonAM('Sahil', 22);
+// let p1 = new PersonAM('Sahil', 22);
 // console.log(p1.name); //Error
+
+
+//Readonly Properties
+class PersonReadOnly{
+  constructor(public name: string, public readonly age: number){
+  
+  }
+
+  changeName(){
+    this.name = 'Sahil'; //Error
+  }
+}
+
+let readonlyPerson = new PersonReadOnly('Sahil', 22);
+// readonlyPerson.changeName('Aadi'); //Error: Cannot assign to 'name' because it is a read-only property.
+
+console.log(readonlyPerson);

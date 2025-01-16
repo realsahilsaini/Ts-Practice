@@ -32,5 +32,12 @@ class Person{
 }
 
 
+//Public & Private Access Modifiers
+class PersonAM{
+  constructor(private name: string, private age: number){
+    console.log(this.name + ' ' + this.age);
+  }
+}
 
-
+let p1 = new PersonAM('Sahil', 22);
+// console.log(p1.name); //Error

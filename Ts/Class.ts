@@ -57,4 +57,27 @@ class PersonReadOnly{
 let readonlyPerson = new PersonReadOnly('Sahil', 22);
 // readonlyPerson.changeName('Aadi'); //Error: Cannot assign to 'name' because it is a read-only property.
 
-console.log(readonlyPerson);
+// console.log(readonlyPerson);
+
+
+//Optional Properties
+class PersonOptionalProps{
+  constructor(public name: string, public age?: number){
+
+  }
+}
+
+let optionalPerson = new PersonOptionalProps('Sahil');
+console.log(optionalPerson);
+
+//Parameter Properties
+class PersonParamProps{
+  constructor(public name: string, public age: number){
+
+  }
+}
+//Here the properties are declared in the constructor itself and not outside the constructor like in the above example 
+
+
+
+

@@ -121,6 +121,13 @@ let s3 = new StaticMembers();
 
 // console.log(StaticMembers.count);
 
+class StaticClass{
+  static print(){
+    console.log('Static Method');
+  }
+}
+
+StaticClass.print(); //Static Method
 
 //Abstract Classes and Methods
 //Abstract classes are the classes that cannot be instantiated and are used as the base class for other classes. Abstract methods are the methods that are declared in the abstract class but are not implemented in the abstract class. The abstract methods must be implemented in the derived class.

@@ -76,6 +76,31 @@ let myGenericClass1 = new GenericClass<string>("Hello");
 
 console.log(myGenericClass1.getVal()); //Hello
 
-let myGenericClass2 = new GenericClass<number>(10);
+// let myGenericClass2 = new GenericClass<number>(10);
 
-console.log(myGenericClass2.getVal()); //10
+// console.log(myGenericClass2.getVal()); //10
+
+
+// ------------------------
+
+//Some Catch (Type Assertion)
+
+function abcd<T>(a:T, b: T):T{
+    return "Hey" as T;
+    //or
+    // return <T>"Hello";
+}
+
+console.log(abcd<string>("Hello", "World")); //Hello
+
+/*
+Here we are trying to return a string literal value from a function that is supposed to return a generic type T. 
+TypeScript doesn't allow this because it is not type-safe.
+
+To overcome this, we can use type assertion to tell the TypeScript compiler that we know what we are doing.
+
+Type assertion is a way to tell the TypeScript compiler that a variable is of a specific type.
+*/
+
+
+

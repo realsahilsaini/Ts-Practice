@@ -21,8 +21,8 @@ function displayData<T>(arg: T): T {
     return arg;
 }
 
-console.log(displayData<number>(10));
-console.log(displayData<string>("Hello"));
+// console.log(displayData<number>(10));
+// console.log(displayData<string>("Hello"));
 
 /*
 The <T> after the function name indicates that the function is a generic function. 
@@ -37,7 +37,7 @@ displayData<string>("Hello") - Here, we are explicitly specifying the type of th
 displayData("Hello") - Here, we are not specifying the type of the argument. TypeScript will infer the type from the argument passed to the function.
 */
 
-
+// ------------------------
 
 //Generic Interfaces
 //Generic interfaces are interfaces that can work with any data type.
@@ -54,4 +54,28 @@ let myGenericInterface: genericInterface<string> = {
   key: "Hello"
 }
 
-console.log(myGenericInterface);
+// console.log(myGenericInterface);
+
+
+// ------------------------
+
+//Generic Classes
+//Generic classes are classes that can work with any data type.
+
+class GenericClass<T>{
+    private val: T;
+    constructor(val: T){
+        this.val = val;
+    }
+    getVal(): T{
+        return this.val;
+    }
+}
+
+let myGenericClass1 = new GenericClass<string>("Hello");
+
+console.log(myGenericClass1.getVal()); //Hello
+
+let myGenericClass2 = new GenericClass<number>(10);
+
+console.log(myGenericClass2.getVal()); //10

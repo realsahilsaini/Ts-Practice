@@ -37,3 +37,21 @@ displayData<string>("Hello") - Here, we are explicitly specifying the type of th
 displayData("Hello") - Here, we are not specifying the type of the argument. TypeScript will infer the type from the argument passed to the function.
 */
 
+
+
+//Generic Interfaces
+//Generic interfaces are interfaces that can work with any data type.
+
+interface genericInterface<T>{
+  name: string;
+  age: number;
+  key:  T; 
+}
+
+let myGenericInterface: genericInterface<string> = {
+  name: "John",
+  age: 25,
+  key: "Hello"
+}
+
+console.log(myGenericInterface);

@@ -8,7 +8,7 @@ interface Swimmable{
 }
 
 //A class implementing multiple interfaces  
-class Duck implements Flyable, Eatable{
+class Duck implements Flyable, Swimmable{
   fly(): void{
     console.log('Duck is flying');
   }

@@ -1,5 +1,5 @@
 //Abstract class
-abstract class Animal{
+abstract class Creature{
   name: string;
 
   constructor(name: string) {
@@ -18,7 +18,7 @@ abstract class Animal{
 }
 
 //Subclass implementing the abstract method
-class Doggo extends Animal{
+class Doggo extends Creature{
 
   constructor(name: string) {
     super(name); //Calling the constructor of the parent class with name argument

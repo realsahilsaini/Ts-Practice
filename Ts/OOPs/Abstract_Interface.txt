@@ -1,0 +1,16 @@
+Key Difference b/w Abstract Class and Interface 
+
+Abstract Class 
+
+- Purpose: Defines a base class with shared implementation and abstract methods.
+- Inheritance: A class can extend only one abstract class. 
+- Implementation: Can have both concrete and abstract methods.
+- Fields/Properties: Can include properties with or without default values.
+
+
+Interface
+
+- Purpose: Defines a contract or blueprint for a class.
+- Inheritance: A class can implement multiple interfaces.
+- Implementation: Cannot have any implementation (except default types with optional properties).
+- Fields/Properties: Can only define the type of properties (no default values).

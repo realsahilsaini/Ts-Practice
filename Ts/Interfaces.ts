@@ -122,3 +122,45 @@ type - Used for primitive types, union, intersection, tuples.
 
 Interface - Used for objects.
 */
+
+
+type GoodUser = {
+    name: string;
+    age: number;
+    good: boolean;
+}
+
+type BadUser = {
+    name: string;
+    age: number;
+    bad: boolean;
+}
+
+//Intersection
+//Intersection: An intersection type combines multiple types into one. This allows you to add together existing types to get a single type that has all the features you need.
+type IntersectionUser = GoodUser & BadUser;
+
+let intersectionUser: IntersectionUser = {
+    name: 'Sahil',
+    age: 22,
+    good: true,
+    bad: false
+}
+
+//Union
+//Union:  A union type describes a value that can be one of several types.
+//Here you can have properties of GoodUser or BadUser also you can have properties of both GoodUser and BadUser
+type UnionUser = GoodUser | BadUser;
+
+let unionUser1: UnionUser = {
+    name: 'Sahil',
+    age: 22,
+    good: true,
+    bad: false
+}
+
+console.log(unionUser1);
+
+
+
+

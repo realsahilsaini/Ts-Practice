@@ -48,3 +48,19 @@ const mapsUsers: Record<string, MapUser> = {
 }
 
 console.log(mapsUsers['id1'].name) // Sahil
+
+//Using Map
+const mapUsers = new Map();
+mapUsers.set('id1', {
+  id: '1',
+  name: 'Sahil',
+  age: 22
+})
+mapUsers.set('id2', {
+  id: '2',
+  name: 'Aaradhya',
+  age: 13
+})
+
+
+console.log(mapUsers.get('id1').name) // Sahil
